@@ -1,9 +1,14 @@
 <div class="app">
   <h1>{{ title }}</h1>
-  <input type="text" (keyup.enter)="onInput($event)">
   <hr>
-  <p>{{ inputData }}</p>
-<app-post></app-post>
+ 
+  <hr>
+  
+  <app-post
+    *ngFor="let item of posts"
+    [post]="item"
+    [id]="item.id"
+  ></app-post>
 
 </div>
 

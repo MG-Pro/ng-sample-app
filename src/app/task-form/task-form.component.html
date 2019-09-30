@@ -1,0 +1,13 @@
+<div class="field">
+  <p class="data-view">Title</p>
+  <input
+    type="text"
+    [(ngModel)]="newTitle">
+</div>
+<div class="field">
+  <p class="data-view">Content</p>
+  <input
+    type="text"
+    [(ngModel)]="newContent">
+</div>
+<button (click)="add()">Add Task</button>
