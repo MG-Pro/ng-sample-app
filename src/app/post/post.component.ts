@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core'
-import {Post} from '../app.component'
+import {Task} from '../app.component'
 
 @Component({
   selector: 'app-post',
@@ -9,6 +9,6 @@ import {Post} from '../app.component'
 })
 
 export class PostComponent {
-  @Input() post: Post
+  @Input() task: Task
 
 }

@@ -1,12 +1,14 @@
 <div class="app">
   <h1>{{ title }}</h1>
   <hr>
- 
+  <app-task-form
+    (onAdd)="updateTasks($event)"
+  ></app-task-form>
   <hr>
   
   <app-post
-    *ngFor="let item of posts"
-    [post]="item"
+    *ngFor="let item of tasks"
+    [task]="item"
     [id]="item.id"
   ></app-post>
 

@@ -1,6 +1,6 @@
 import {Component} from '@angular/core'
 
-export interface Post {
+export interface Task {
   title: string,
   content: string,
   id: number
@@ -14,10 +14,12 @@ export interface Post {
 export class AppComponent {
   title = 'ToDo App'
 
-  posts: Post[] = [
+  tasks: Task[] = [
 
   ];
 
-
+  updateTasks(task: Task) {
+    this.tasks.unshift(task)
+  }
 
 }
