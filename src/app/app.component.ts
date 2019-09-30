@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-sample-app';
+  title = 'Test App';
+
+  inputData = ''
+
+  onInput(e: KeyboardEvent) {
+    this.inputData = (<HTMLInputElement>e.target).value
+  }
 }
