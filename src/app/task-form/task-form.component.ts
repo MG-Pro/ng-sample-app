@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core'
+import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core'
 import {Task} from '../app.component'
 
 @Component({
@@ -8,6 +8,8 @@ import {Task} from '../app.component'
 })
 export class TaskFormComponent {
   @Output() onAdd: EventEmitter<Task> = new EventEmitter<Task>()
+
+  @ViewChild('counter', {static: false}) counterRef: ElementRef
 
   id:number = 0
   newTitle: string = ''
@@ -25,5 +27,6 @@ export class TaskFormComponent {
       id: this.id++
     }
     this.onAdd.emit(task);
+    console.log(this.counterRef);
   }
 }
