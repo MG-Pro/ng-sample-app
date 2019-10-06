@@ -1,5 +1,5 @@
 <div class="app">
-  <h1>{{ title }}</h1>
+  <h1 appStyle="blue">{{ title }}</h1>
   <hr>
   <app-task-form
     (onAdd)="updateTasks($event)"
@@ -11,7 +11,10 @@
     [task]="item"
     [id]="item.id"
   ></app-post>
-
+  
+  <button (click)="footer = !footer">Toggle</button>
+  <br><br>
+  <p *appNotIf="footer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor expedita facilis fugit ipsam magnam maxime nam obcaecati omnis quaerat.</p>
 </div>
 
 <router-outlet></router-outlet>

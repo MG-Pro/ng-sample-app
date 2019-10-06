@@ -6,12 +6,16 @@ import {AppComponent} from './app.component';
 import {PostComponent} from "./post/post.component";
 import {FormsModule} from "@angular/forms";
 import { TaskFormComponent } from './task-form/task-form.component';
+import { StyleDirective } from './directives/style.directive';
+import { NotIfDirective } from './directives/not-if.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    TaskFormComponent
+    TaskFormComponent,
+    StyleDirective,
+    NotIfDirective
   ],
   imports: [
     BrowserModule,

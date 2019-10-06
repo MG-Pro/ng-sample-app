@@ -13,6 +13,7 @@ export interface Task {
 })
 export class AppComponent {
   title = 'ToDo App'
+  footer = false
 
   tasks: Task[] = [
 
