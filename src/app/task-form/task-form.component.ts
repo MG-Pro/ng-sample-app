@@ -26,7 +26,11 @@ export class TaskFormComponent {
       content: this.newContent,
       id: this.id++
     }
+
+    this.newContent = ''
+    this.newContent = ''
+
     this.onAdd.emit(task)
-    console.log(this.counterRef)
+    console.log(this.onAdd)
   }
 }

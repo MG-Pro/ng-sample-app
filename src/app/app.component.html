@@ -3,15 +3,16 @@
   <hr>
   <app-task-form
     (onAdd)="updateTasks($event)"
-  >Count: </app-task-form>
+  >Count:
+  </app-task-form>
   <hr>
-  
+
   <app-post
     *ngFor="let item of tasks"
     [task]="item"
     [id]="item.id"
   ></app-post>
-  
+
   <button (click)="footer = !footer">Toggle</button>
   <br><br>
   <p *appNotIf="footer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolor expedita facilis fugit ipsam magnam maxime nam obcaecati omnis quaerat.</p>
